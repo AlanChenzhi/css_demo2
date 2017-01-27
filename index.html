@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=US-ASCII">
+    
+    <style type="text/css">
+    	body{
+    		margin:0px;
+    	}
+    	.cell{
+    		width:30%;
+    		height: 0px;
+    		background-color: orange;
+    		float:right;
+    		margin: 3% 3% 0 0;
+    		border-radius: 5px;
+    	}
+    </style>
+  </head>
+  
+  <body>
+	  <div class="cell"></div>
+	  <div class="cell"></div>
+	  <div class="cell"></div>
+
+	  <div class="cell"></div>
+	  <div class="cell"></div>
+	  <div class="cell"></div>
+
+	  <div class="cell"></div>
+	  <div class="cell"></div>
+	  <div class="cell"></div>
+  </body>
+  <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  	var heightAuto = function(){
+  		var bodyWidth = $("body").width()*0.3;
+  		// 计算布局
+  		$(".cell").each(function(i,item){
+  			$(this).css("height",bodyWidth);
+  		});
+  	};
+  	//监听窗口resize
+	var resizeListener = function(){
+		$(window).resize(function() {
+			var bodyWidth = $("body").width()*0.3;
+  	  		// 计算布局
+	  		$(".cell").each(function(i,item){
+	  			$(this).css("height",bodyWidth);
+			});
+		});
+	};
+	
+  	$(function(e){
+		heightAuto();
+		resizeListener();
+  	});
+  </script>
+</html>
