@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style type="text/css">
+      /*body样式*/
+      body {
+          margin: 0;
+      }
+      /*外容器*/
+      .wrap {
+        /*上，右 内边距*/
+          padding: 3% 0 0 3%;
+      }
+      /*单个div*/
+      .square {
+        /*右侧浮动*/
+          float: left;
+          /*上边距 控制宽高一致*/
+          padding: 30% 0 0 0;
+          /*左 下 外边距*/
+          margin: 0 3% 3% 0;
+          /*宽度百分比 实现自适应*/
+          width: 30%;
+          /*背景色*/
+          background: orange;
+          /*div圆角 用百分比*/
+          border-radius: 10%;
+          /*阴影*/
+          box-shadow: 5px 7px 7px gray;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="wrap">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+  </body>
+  </script>
+</html>
